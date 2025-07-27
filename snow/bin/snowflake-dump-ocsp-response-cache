@@ -1,4 +1,4 @@
-#!/home/polia/Snowflake_pipelines/snow/bin/python3
+#!/home/polia/Snowflake_pipelines/snowflake-dbt/snow/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

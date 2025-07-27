@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV /home/polia/Snowflake_pipelines/snow
+set -gx VIRTUAL_ENV /home/polia/Snowflake_pipelines/snowflake-dbt/snow
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"bin $PATH

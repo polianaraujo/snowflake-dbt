@@ -1,0 +1,30 @@
+[0m18:56:01.888199 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a86ec3dc3b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a86ec679b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a86eccab500>]}
+
+
+============================== 18:56:01.891860 | cb0a7753-3c13-4c2f-918a-c1ca95ce0b3b ==============================
+[0m18:56:01.891860 [info ] [MainThread]: Running with dbt=1.10.5
+[0m18:56:01.892551 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/home/polia/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt init snow_dbt_project', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:56:01.905307 [debug] [MainThread]: Starter project path: /home/polia/Snowflake_pipelines/snowflake-dbt/snow/lib/python3.12/site-packages/dbt/include/starter_project
+[0m18:56:01.910318 [info ] [MainThread]: 
+Your new dbt project "snow_dbt_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:56:01.910829 [info ] [MainThread]: Setting up your profile.
+[0m19:08:54.444651 [info ] [MainThread]: Profile snow_dbt_project written to /home/polia/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m19:08:54.457288 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 755.63995, "process_in_blocks": "18504", "process_kernel_time": 0.25936, "process_mem_max_rss": "122204", "process_out_blocks": "80", "process_user_time": 1.432465}
+[0m19:08:54.459107 [debug] [MainThread]: Command `dbt init` succeeded at 19:08:54.458925 after 755.64 seconds
+[0m19:08:54.459778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a86ee9d5730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a86eaee7bc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a86ebe6f200>]}
+[0m19:08:54.460343 [debug] [MainThread]: Flushing usage events
+[0m19:08:37.475287 [debug] [MainThread]: An error was encountered while trying to flush usage events
