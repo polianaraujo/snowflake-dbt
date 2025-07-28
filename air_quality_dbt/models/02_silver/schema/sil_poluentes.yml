@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: sil_poluentes
+    description: |
+      Tabela intermediária que consolida e padroniza os dados das concentrações de poluentes na cidade de Bogotá, servindo de base para análises e para a camada analítica (Gold).
+    tags: ['silver', 'qualidade_ar']
+    # meta:
+    #   contains_pii: false
+    #   owner: Owner
+    #   contact_email: owner@email.com
+    columns:
+      - name: pm10
+        description: |
+          Concentração de PM10.
+        # data_tests:
+        #   - unique
+        #   - not_null
+      - name: pm2_5
+        description: |
+          Concentração de PM2.5.
+      - name: 'no'
+        description: |
+          Concentração de NO.
+      - name: no2
+        description: |
+          Concentração de NO2.
+      - name: nox
+        description: |
+          Concentração de NOX.
+      - name: co
+        description: |
+          Concentração de CO.
+      - name: ozono
+        description: |
+          Concentração de OZONO.
+      - name: station
+        description: |
+          ID da estação do sensor.
+      - name: data_medicao
+        description: |
+          Data e hora da concentração medida.
+      

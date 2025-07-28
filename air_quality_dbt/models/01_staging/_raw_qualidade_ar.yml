@@ -1,0 +1,114 @@
+version: 2
+
+sources:
+  - name: raw # grupo de fontes de dados
+    database: air_bronze
+    schema: raw
+    freshness:
+      warn_after: {count: 1, period: day} # Se o registro mais recente na tabela (baseado em data_extracao) for mais antigo que 1 dia, emita um AVISO
+      error_after: {count: 2, period: day} # Se o registro mais recente na tabela for mais antigo que 2 dias, emita um ERRO
+    loaded_at_field: cast(datetime_text as timestamp) # diz ao dbt qual coluna na sua tabela de origem indica quando os dados foram carregados. dbt irá converter o valor dessa coluna para um timestamp
+    tables:
+      - name: raw_poluentes
+        description: |
+          Tabela bruta com dados das concentrações de poluentes na cidade de Bogotá durante todo o ano 2021.
+        columns:
+          - name: pm10
+            description: |
+              Concentração de PM10
+            data_tests:
+              - not_null
+          - name: pm2_5
+            description: |
+              Concentração de PM2.5
+            data_tests:
+              - not_null
+          - name: 'no'
+            description: |
+              Concentração de NO
+            data_tests:
+              - not_null
+          - name: no2
+            description: |
+              Concentração de NO2
+            data_tests:
+              - not_null
+          - name: nox
+            description: |
+              Concentração de NOX
+            data_tests:
+              - not_null
+          - name: co
+            description: |
+              Concentração de CO
+            data_tests:
+              - not_null
+          - name: ozono
+            description: |
+              Concentração de OZONO
+            data_tests:
+              - not_null
+          - name: station
+            description: |
+              ID da estação do sensor
+            data_tests:
+              - not_null
+          - name: datetime_text
+            description: |
+              Data/hora da detecção
+            data_tests:
+              - not_null
+      - name: raw_estacoes
+        description: |
+          Tabela bruta com dados das informações das estações dos sensores.
+        columns:
+          - name: estacao
+            description: |
+              Nome da estação
+            data_tests:
+              - not_null
+          - name: sigla
+            description: |
+              Sigla da estação.
+            data_tests:
+              - not_null
+          - name: latitude
+            description: |
+              Latitude da estação.
+            data_tests:
+              - not_null
+          - name: longitude
+            description: |
+              Longitude da estação.
+            data_tests:
+              - not_null
+          - name: altitude_metros
+            description: |
+              Altitude da estação em metros.
+            data_tests:
+              - not_null
+          - name: altura_metros
+            description: |
+              Altura da estação em metros.
+            data_tests:
+              - not_null
+          - name: localidade
+            description: |
+              Cidade em que a estação está localizada.
+            data_tests:
+              - not_null
+          - name: tipo_zona
+            description: |
+              Região (urbana/suburbana) da estação.
+            data_tests:
+              - not_null
+          - name: tipo_estacao
+            description: |
+              De fundo / de tráfego / industrial / residencial.
+            data_tests:
+              - not_null
+          - name: direcao
+            description: |
+              Direção .
+            data_tests:
+              - not_null

@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: mart_qualidade_ar_diario
+    description: "Tabela agregada com métricas diárias (média, máximo, contagem) de poluentes para cada estação. Fonte principal para dashboards de análise."
+    tags: ['gold', 'mart', 'qualidade_ar']
+    columns:
+      - name: data_dia
+        description: "O dia ao qual as métricas se referem."
+        tests:
+          - not_null
+      - name: station
+        description: "ID da estação do sensor."
+        tests:
+          - not_null
+      - name: media_diaria_pm10
+        description: "Média diária da concentração de PM10 para a estação."
+      - name: pico_diario_pm10
+        description: "Concentração máxima de PM10 registrada no dia para a estação."
+      - name: media_diaria_pm2_5
+        description: "Média diária da concentração de PM2.5 para a estação."
+      - name: pico_diario_pm2_5
+        description: "Concentração máxima de PM2.5 registrada no dia para a estação."
+      - name: media_diaria_no2
+        description: "Média diária da concentração de NO2 para a estação."
+      - name: pico_diario_no2
+        description: "Concentração máxima de NO2 registrada no dia para a estação."
+      - name: total_de_medicoes_dia
+        description: "Número de medições individuais que compõem as métricas do dia."
