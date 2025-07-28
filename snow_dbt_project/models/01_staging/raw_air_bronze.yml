@@ -1,0 +1,120 @@
+version: 2
+
+sources:
+  - name: raw
+    database: AIR_BRONZE
+    schema: raw
+    # tags: ['raw_air_bronze', 'bronze']
+    # meta:
+      # contains_pii: false
+      # source_owner: Owner
+      # source_contact_emai: owner@email.com
+    # freshness:
+    #   warn_after: {count: 1, period: day}
+    #   error_after: {count: 2, period: day}
+    # loaded_at_field: cast(datetime as timestamp)
+    tables:
+      - name: raw_poluentes
+        description: |
+          "Tabela de concentrações de poluentes no ar da cidade de Bogotá durante o ano de 2021."
+        columns:
+          - name: pm10
+            description: |
+              "Concentração de PM10."
+            data_tests:
+              - not_null
+          - name: pm2_5
+            description: |
+              "Concentração de PM2.5."
+            data_tests:
+              - not_null
+          - name: 'no'
+            description: |
+              "Concentração de NO."
+            data_tests:
+              - not_null
+          - name: no2
+            description: |
+              "Concentração de NO2."
+            data_tests:
+              - not_null
+          - name: nox
+            description: |
+              "Concentração de NOX."
+            data_tests:
+              - not_null
+          - name: co
+            description: |
+              "Concentração de CO."
+            data_tests:
+              - not_null
+          - name: ozono
+            description: |
+              "Concentração de OZONO."
+            data_tests:
+              - not_null
+          - name: station
+            description: |
+              "Estação do sensor."
+            data_tests:
+              - not_null
+          - name: datetime
+            description: |
+              "Data e hora de captação."
+            data_tests:
+              - not_null
+      - name: raw_estacoes
+        description: |
+          "Tabela de informações das estações de cada sensor instalados na cidade."
+        columns:
+          - name: station
+            description: |
+              "Estação do sensor."
+            data_tests:
+              - not_null:
+                  severity: warn
+          - name: id
+            description: |
+              "ID da estação."
+            data_tests:
+              - not_null
+          - name: latitude
+            description: |
+              "Latitude da estação."
+            data_tests:
+              - not_null
+          - name: longitude
+            description: |
+              "Longitude da estação."
+            data_tests:
+              - not_null
+          - name: altitude_metros
+            description: |
+              "Altitude em metros da estação."
+            data_tests:
+              - not_null
+          - name: altura_metros
+            description: |
+              "Altura em metros da estação."
+            data_tests:
+              - not_null
+          - name: localidade
+            description: |
+              "Localidade da estação."
+            data_tests:
+              - not_null
+          - name: tipo_zona
+            description: |
+              "Tipo de zona da estação."
+            data_tests:
+              - not_null
+          - name: tipo_estação
+            description: |
+              "Tipo da estação."
+            data_tests:
+              - not_null
+          - name: direcao
+            description: |
+              "Direção da estação."
+            data_tests:
+              - not_null

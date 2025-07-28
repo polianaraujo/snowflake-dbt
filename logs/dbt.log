@@ -28,3 +28,19 @@ Happy modeling!
 [0m19:08:54.459778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a86ee9d5730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a86eaee7bc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a86ebe6f200>]}
 [0m19:08:54.460343 [debug] [MainThread]: Flushing usage events
 [0m19:08:37.475287 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:57:55.895692 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x759234b11760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x759236a58a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x759234846210>]}
+
+
+============================== 22:57:55.902049 | d2ade47f-02f2-4307-9cec-e4dea149e3f9 ==============================
+[0m22:57:55.902049 [info ] [MainThread]: Running with dbt=1.10.5
+[0m22:57:55.903321 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': '/home/polia/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt compile --select stg_poluentes --target dev', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m22:57:55.903849 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/polia/Snowflake_pipelines/snowflake-dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m22:57:55.905468 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 0.06386278, "process_in_blocks": "64400", "process_kernel_time": 0.232089, "process_mem_max_rss": "99260", "process_out_blocks": "16", "process_user_time": 1.355888}
+[0m22:57:55.905910 [debug] [MainThread]: Command `dbt compile` failed at 22:57:55.905818 after 0.06 seconds
+[0m22:57:55.906220 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7592348443b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7592346eee40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x759233faff50>]}
+[0m22:57:55.906640 [debug] [MainThread]: Flushing usage events
+[0m22:57:56.537915 [debug] [MainThread]: An error was encountered while trying to flush usage events
